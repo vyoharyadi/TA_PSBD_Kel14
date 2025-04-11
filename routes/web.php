@@ -35,11 +35,11 @@ Route::middleware('only_guest')->group(function () {
 Route::middleware('auth')->group(function () {
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::middleware('only_user')->group(function () {
-        Route::get('profile', [UserController::class, 'profile'])->name('profile');
-    Route::get('booklist', [BooklistController::class, 'index'])->name('booklist.index');
-    Route::get('booklist/search', [BooklistController::class, 'search'])->name('booklist.search');
-});
+    Route::middleware('only_user')->group(function () {
+            Route::get('profile', [UserController::class, 'profile'])->name('profile');
+        Route::get('booklist', [BooklistController::class, 'index'])->name('booklist.index');
+        Route::get('booklist/search', [BooklistController::class, 'search'])->name('booklist.search');
+    });
 
     Route::middleware('only_admin')->group(function () {
         Route::get('dashboard', [DashboardController::class, 'index']);
