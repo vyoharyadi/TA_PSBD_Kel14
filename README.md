@@ -11,7 +11,7 @@ e-rentBook adalah sebuah website berbasis Laravel yang dikembangkan untuk menunj
 - Melihat daftar buku yang tersedia di perpustakaan
 - Mengecek status ketersediaan buku
 
-### 🛠️ Admin
+### 👤 Admin
 - Mengelola data pengguna
 - Mengelola data buku
 - Mengisi formulir peminjaman buku yang diajukan oleh user
