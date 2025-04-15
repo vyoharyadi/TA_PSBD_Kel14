@@ -25,12 +25,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware('only_guest')->group(function () {
     Route::get('login', [AuthController::class, 'login'])->name('login');
     Route::post('login', [AuthController::class, 'authenticating']);
     Route::get('register', [AuthController::class, 'register']);
     Route::post('register', [AuthController::class, 'registering']);
-});
 
 Route::middleware('auth')->group(function () {
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
